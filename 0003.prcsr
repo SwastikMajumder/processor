@@ -1,0 +1,30 @@
+INPUT:1:ON{
+	AND:2;
+	XOR:1;
+}
+INPUT:2:ON{
+	AND:2;
+	XOR:1;
+}
+INPUT:3:ON{
+	AND:1;
+	XOR:2;
+}
+OR:1{
+	OUTPUT:2;
+}
+AND:1{
+	OR:1;
+}
+AND:2{
+	OR:1;
+}
+XOR:1{
+	AND:1;
+	XOR:2;
+}
+XOR:2{
+	OUTPUT:1;
+}
+OUTPUT:1{}
+OUTPUT:2{}
