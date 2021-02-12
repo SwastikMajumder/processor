@@ -1,0 +1,42 @@
+INPUT:1:ON{
+	AND:1;
+	XOR:1;
+}
+INPUT:2:ON{
+	AND:3;
+	XOR:2;
+}
+INPUT:3:ON{
+	AND:1;
+	XOR:1;
+}
+INPUT:4:ON{
+	AND:3;
+	XOR:2;
+}
+OR:1{
+	OUTPUT:1;
+}
+AND:1{
+	AND:2;
+	XOR:3;
+}
+AND:2{
+	OR:1;
+}
+AND:3{
+	OR:1;
+}
+XOR:1{
+	OUTPUT:3;
+}
+XOR:2{
+	AND:2;
+	XOR:3;
+}
+XOR:3{
+	OUTPUT:2;
+}
+OUTPUT:1{}
+OUTPUT:2{}
+OUTPUT:3{}
